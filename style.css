@@ -1,46 +1,72 @@
 body {
-  text-align: center;
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif;
-  position: relative;
+  background: #AFA4CE;
+  width: 100vw;
+  height: 100vw; /* hauteur égale à la largeur pour un carré */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
 }
 
-
-.timeline{
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+.timeline {
+  position: relative; /* enlever position:absolute pour respecter le flow */
   width: 80%;
   height: 10px;
   background: #EEE;
+  border-radius: 5px;
+  margin-bottom: 20px; /* espace sous la timeline */
 }
-#progress-bar{
+
+#progress-bar {
   width: 0%;
   height: 100%;
   background: black;
-  transition:.2s ease;
+  transition: 0.2s ease;
+  border-radius: 5px;
 }
+
 .actions {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  flex-grow: 1; /* pour prendre le reste de l’espace */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 5px; /* réduit l’espacement vertical */
+  border-radius: 5px;
 }
 
 .actions span {
-  font-size: 20px;
-  line-height: 2em; /* pour séparer verticalement */
-  color: #AAA;
+  font-size: 30px;
+  line-height: 1.2em; /* réduit un peu l’espacement vertical */
+  color: #EEE6D8;
+  margin: 0; /* annule marges par défaut */
+  transition:.2s ease;
+  pointer-events: none;
 }
 
 .actions span.active {
   color: #000;
 }
+
 .Home {
   height: 200px;
-  border-radius: 15px;
+  border-radius: 5px;
   display: block;
   margin: 0 auto;
+}
+.utile button{
+  display: flex;
+  justify-content: center; /* centre les boutons horizontalement */
+  padding: 10px;
+  font-size: 10px;
+  bottom: 0%;
+  width: 100%;
+  gap: 10px;
+  color: black;
 }
